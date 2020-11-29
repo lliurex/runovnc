@@ -5,15 +5,16 @@ SRCS=src/runovnc.c
 OBJS=$(subst .c,.o,$(SRCS))
 PREFIX=/usr
 DIRS=bin
-$(info $(shell mkdir -p $(PREFIX)/$(DIRS)))
 all: runovnc
 
 runovnc: $(OBJS)
+	$(info $(shell mkdir -p $(DIRS)))
 	$(CC) -o $(DIRS)/runovnc $(OBJS) $(LDLIBS)
 
 runvnc.o: $(SRCS)
 
 install:
+	$(info $(shell mkdir -p $(DESTDIR)/$(PREFIX)/$(DIRS)))
 	install -m 755 $(DIRS)/runovnc $(DESTDIR)/$(PREFIX)/$(DIRS)
 
 clean:
