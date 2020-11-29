@@ -8,6 +8,7 @@ DIRS=bin
 all: runovnc
 
 runovnc: $(OBJS)
+	$(info $(shell mkdir -p $(DIRS)))
 	$(CC) -o $(DIRS)/runovnc $(OBJS) $(LDLIBS)
 
 runvnc.o: $(SRCS)
@@ -20,4 +21,4 @@ clean:
 	rm -f $(OBJS)
 
 distclean: clean
-	rm -f $(DIRS)/runovnc
+	rm -rf $(DIRS)
