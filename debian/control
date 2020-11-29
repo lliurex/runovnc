@@ -1,0 +1,30 @@
+Source: runovnc
+Section: admin
+Priority: optional
+Maintainer: Equipo LliureX <lliurex@gva.es>
+Uploaders: M.Angel Juan <m.angel.juan@gmail.com>, Raul Rodrigo Segura <lliurex_devel3@edu.gva.es>, Hector Garcia Huerta <lliurex_devel1@edu.gva.es>, Daniel Duran Vecino <daduve@gmail.com>, Juanma Navarro <juanma1980@gmail.com>, Juan Ramon Pelegrina <juapesai@hotmail.com>
+Build-Depends: llxsrchelper,
+ debhelper (>= 7.0),
+ libgtk-vnc-2.0-dev,
+ libcairo2-dev,
+ libffi-dev,
+ libgcrypt20-dev,
+ libgirepository1.0-dev,
+ libgnutls28-dev,
+ libgtk-3-dev,
+ libgtk2.0-dev,
+ libpulse-dev,
+ libsasl2-dev,
+ valac (>= 0.20)
+Standards-Version: 3.9.5
+Homepage: http://lliurex.net
+
+Package: runovnc
+Architecture: any
+Section: x11
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: runovnc is a gvncviewer fork
+ It has no options menu and disabled keybinds.
+ Its main purpose is to be embebbed inside runomatic tabs.

@@ -1,0 +1,5 @@
+runovnc (1.0) bionic; urgency=medium
+
+  * Fork of gvncviewer 1.0 without menu
+
+ -- Juanma Navarro Mañez <juanma1980@gmail.com>  Fri, 20 Jul 2018 08:44:37 +0200
