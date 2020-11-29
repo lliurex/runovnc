@@ -21,4 +21,4 @@ clean:
 	rm -f $(OBJS)
 
 distclean: clean
-	rm -f $(DIRS)/runovnc
+	rm -f $(DIRS)
