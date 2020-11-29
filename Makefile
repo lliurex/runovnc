@@ -14,7 +14,7 @@ runovnc: $(OBJS)
 runvnc.o: $(SRCS)
 
 install:
-	instal -m 755 runovnc $(DESTDIR)/$(PREFIX)/$(DIRS)
+	install -m 755 runovnc $(DESTDIR)/$(PREFIX)/$(DIRS)
 
 clean:
 	rm -f $(OBJS)
