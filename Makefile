@@ -21,4 +21,4 @@ clean:
 	rm -f $(OBJS)
 
 distclean: clean
-	rm -f $(DIRS)
+	rm -rf $(DIRS)
