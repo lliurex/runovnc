@@ -4,18 +4,20 @@ LDLIBS=-lgtk-vnc-2.0 -lgtk-3 -lgdk-3 -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0 -
 SRCS=src/runovnc.c
 OBJS=$(subst .c,.o,$(SRCS))
 PREFIX=/usr
+DIRS=bin
+$(info $(shell mkdir -p $(PREFIX)/$(DIRS)))
 all: runovnc
 
 runovnc: $(OBJS)
-	$(CC) -o bin/runovnc $(OBJS) $(LDLIBS)
+	$(CC) -o $(DIRS)/runovnc $(OBJS) $(LDLIBS)
 
 runvnc.o: $(SRCS)
 
 install:
-	install -m 755 bin/runovnc $(DESTDIR)/$(PREFIX)/bin
+	instal -m 755 runovnc $(DESTDIR)/$(PREFIX)/$(DIRS)
 
 clean:
 	rm -f $(OBJS)
 
 distclean: clean
-	rm -f bin/runovnc
+	rm -f $(DIRS)/runovnc
