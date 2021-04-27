@@ -1,3 +1,10 @@
+runovnc (1.0.1) focal; urgency=medium
+
+  * First focal release.
+  * 
+
+ -- Juanma1980 <juanma1980@gmail.com>  Tue, 27 Apr 2021 16:05:04 +0200
+
 runovnc (1.0) bionic; urgency=medium
 
   * Fork of gvncviewer 1.0 without menu
