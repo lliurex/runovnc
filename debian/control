@@ -25,6 +25,8 @@ Section: x11
 Depends:
  ${misc:Depends},
  ${shlibs:Depends},
+ libgtk-vnc-2.0-0,
+ libgvnc-1.0-0
 Description: runovnc is a gvncviewer fork
  It has no options menu and disabled keybinds.
  Its main purpose is to be embebbed inside runomatic tabs.
